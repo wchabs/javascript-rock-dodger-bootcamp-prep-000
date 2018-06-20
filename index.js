@@ -67,7 +67,11 @@ function createRock(x) {
    * Now that we have a rock, we'll need to append
    * it to GAME and move it downwards.
    */
+<<<<<<< HEAD
   GAME.appendChild(rock);
+=======
+   GAME.appendChild(rock);
+>>>>>>> 4b9a5a96ab347416f39578f26ebec0c95190e311
 
 
   /**
@@ -93,8 +97,13 @@ function createRock(x) {
      */
      if (checkCollision(rock)) {
        endGame();
+<<<<<<< HEAD
      } else if (positionToInteger(rock.style.top) < 380) {
        rock.style.top = `${top += 2}px`;//remember that style needs px
+=======
+     } else if (positionToInteger(rock.style.top) < 360) {
+       rock.style.top += 2;
+>>>>>>> 4b9a5a96ab347416f39578f26ebec0c95190e311
        window.requestAnimationFrame(moveRock);
      } else {
        GAME.removeChild(rock);
@@ -102,7 +111,11 @@ function createRock(x) {
   }
 
   // We should kick of the animation of the rock around here
+<<<<<<< HEAD
   window.requestAnimationFrame(moveRock);
+=======
+  window.requestAnimationFrame(moveRock)
+>>>>>>> 4b9a5a96ab347416f39578f26ebec0c95190e311
 
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
@@ -193,9 +206,15 @@ function moveDodgerRight() {
    function step() {
      DODGER.style.left = `${left += 4}px`;
      
+<<<<<<< HEAD
      //if (left < 360) {
     //   window.requestAnimationFrame(step);
     // }
+=======
+     if (left < 360) {
+       window.requestAnimationFrame(step);
+     }
+>>>>>>> 4b9a5a96ab347416f39578f26ebec0c95190e311
    }
    
    if (left < 360) {
